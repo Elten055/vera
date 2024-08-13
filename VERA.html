@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .mother {
+                width: 100%;
+                min-height: 100vh;
+                padding: 10px;
+                background: linear-gradient(135deg, #153677, #4e085f);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .baby {
+                width: 70%;
+                height: 80;
+                padding: 200px 50px;
+                background-color: aliceblue;
+                display: grid;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .div-1 {
+                background-color: rgba(0, 213, 175, 1);
+                width: 1200px;
+                height: 350px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                border-radius: 10px;
+            }
+
+            .div-2 {
+                background-color: rgba(0, 56, 255, 0.8);
+                width: 1200px;
+                height: 350px;
+                position: relative;
+                border-radius: 10px;
+                margin-top: 200px;
+            }
+
+            .div-3 {
+                background-color: rgba(234, 239, 0, 1);
+                width: 1200px;
+                height: 480px;
+                position: relative;
+                border-radius: 10px;
+                margin-top: 30px;
+                border: 10px solid rgba(234, 239, 0, 1);
+            }
+
+            .div-4 {
+                width: 1224px;
+                height: 508px;
+                position: relative;
+                border-radius: 10px;
+                margin-top: 30px;
+                background-image: url(./CSS/Rectangle\ 17.png);
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            .div-5 {
+                width: 1224px;
+                height: 518px;
+                position: relative;
+                border-radius: 10px;
+                margin-top: 30px;
+                background-color: rgba(217, 217, 217, 1);
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+            .div-mini-1 {
+                height: 100%;
+                width: 100%;
+                position: relative;
+            }
+            .div-mini-1 div {
+                width: 303px;
+                height: 256px;
+                position: absolute;
+            }
+            .div-mini-2 {
+                height: 100%;
+                width: 100%;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .div-mini-2 div {
+                width: 250px;
+                height: 250px;
+                position: absolute;
+            }
+            .mum-1 {
+                background-color: rgba(255, 0, 0, 0.8);
+                border-radius: 50%;
+                right: 65px;
+                bottom: 65px;
+                z-index: 2;
+            }
+            .mum-2 {
+                background-color: rgba(0, 167, 67, 0.8);
+                border-radius: 50%;
+                right: 250px;
+                bottom: 65px;
+                z-index: 3;
+            }
+            .mum-3 {
+                background-color: rgba(0, 56, 255, 0.8);
+                border-radius: 50%;
+                right: 157px;
+                bottom: 235px;
+                z-index: 1;
+            }
+            .numb-1 {
+                background-color: yellow;
+                border: 3px solid orangered;
+                bottom: 70px;
+                right: 70px;
+                z-index: 3;
+            }
+            .numb-2 {
+                background-color: rgb(195, 255, 105);
+                border: 3px solid rgb(3, 56, 3);
+                bottom: 140px;
+                right: 140px;
+                z-index: 2;
+            }
+            .numb-3 {
+                background-color: rgb(255, 141, 141);
+                border: 3px solid red;
+                bottom: 210px;
+                right: 210px;
+                z-index: 1;
+            }
+            .div-mini-2 {
+                height: 100%;
+                width: 100%;
+            }
+            .soso {
+                background-color: rgba(116, 255, 229, 0.63);
+                width: 1020px;
+                height: 280px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .solo {
+                background-color: rgb(95, 128, 247);
+                width: 1020px;
+                height: 250px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                top: 80px;
+                right: 99px;
+                position: absolute;
+            }
+
+            .soso p {
+                font-size: 96px;
+                font-weight: 700;
+                color: #443afb;
+                text-shadow: 3px 3px #fff, -3px -3px #fff, -3px 3px #fff,
+                    3px -3px #fff;
+            }
+
+            .solo p {
+                font-size: 96px;
+                font-weight: 700;
+                color: black;
+                text-shadow: 3px 3px #fff, -3px -3px #fff, -3px 3px #fff,
+                    3px -3px #fff;
+            }
+
+            .img {
+                width: 230px;
+                height: 230px;
+                position: absolute;
+                top: -110px;
+            }
+            .img img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                border: #4e085f 4px solid;
+            }
+
+            .img-2 {
+                width: 230px;
+                height: 230px;
+                position: absolute;
+                top: -110px;
+                right: 490px;
+                z-index: 100;
+            }
+            .img-2 img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                border: #4e085f 4px solid;
+            }
+            .sec-1 img {
+                width: 90px;
+                height: 90px;
+                position: absolute;
+                left: -46px;
+                bottom: 252px;
+                background-color: #9a95fc;
+                border-radius: 10px;
+            }
+            .sec-2 img {
+                width: 90px;
+                height: 90px;
+                position: absolute;
+                left: -46px;
+                bottom: 135px;
+                background-color: #9a95fc;
+                border-radius: 10px;
+            }
+
+            .sec-3 img {
+                width: 90px;
+                height: 90px;
+                position: absolute;
+                left: -46px;
+                bottom: 18px;
+                background-color: #9a95fc;
+                border-radius: 10px;
+            }
+
+            .sec-4 img {
+                width: 90px;
+                height: 90px;
+                position: absolute;
+                right: -46px;
+                bottom: 252px;
+                background-color: #9a95fc;
+                border-radius: 10px;
+            }
+            .sec-5 img {
+                width: 90px;
+                height: 90px;
+                position: absolute;
+                right: -46px;
+                bottom: 135px;
+                background-color: #9a95fc;
+                border-radius: 10px;
+            }
+
+            .sec-6 img {
+                width: 90px;
+                height: 90px;
+                position: absolute;
+                right: -46px;
+                bottom: 18px;
+                background-color: #9a95fc;
+                border-radius: 10px;
+            }
+            .sec-7 img {
+                width: 90px;
+                height: 90px;
+                position: absolute;
+                left: 76px;
+                top: -36px;
+                background-color: hsl(0, 0%, 80%);
+                border-radius: 10px;
+            }
+
+            .sec-8 img {
+                width: 90px;
+                height: 90px;
+                position: absolute;
+                left: 202px;
+                top: -36px;
+                background-color: hsl(0, 0%, 80%);
+                border-radius: 10px;
+            }
+
+            .sec-9 img {
+                width: 90px;
+                height: 90px;
+                position: absolute;
+                left: 328px;
+                top: -36px;
+                background-color: hsl(0, 0%, 80%);
+                border-radius: 10px;
+            }
+
+            .sec-10 img {
+                width: 90px;
+                height: 90px;
+                position: absolute;
+                right: 76px;
+                top: -36px;
+                background-color: hsl(0, 0%, 80%);
+                border-radius: 10px;
+            }
+
+            .sec-11 img {
+                width: 90px;
+                height: 90px;
+                position: absolute;
+                right: 202px;
+                top: -36px;
+                background-color: hsl(0, 0%, 80%);
+                border-radius: 10px;
+            }
+
+            .sec-12 img {
+                width: 90px;
+                height: 90px;
+                position: absolute;
+                right: 328px;
+                top: -36px;
+                background-color: hsl(0, 0%, 80%);
+                border-radius: 10px;
+            }
+
+            .h1 {
+                text-align: center;
+                margin: 50px;
+            }
+
+            .box-1 {
+                width: 240px;
+                height: 240px;
+                background-color: rgba(25, 25, 25, 1);
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            .box-2 {
+                width: 240px;
+                height: 240px;
+                background-color: rgba(25, 25, 25, 1);
+                position: absolute;
+                bottom: 0;
+                left: 240px;
+            }
+            .box-3 {
+                width: 240px;
+                height: 240px;
+                background-color: rgba(25, 25, 25, 1);
+                position: absolute;
+                top: 0;
+                left: 480px;
+            }
+            .box-4 {
+                width: 240px;
+                height: 240px;
+                background-color: rgba(25, 25, 25, 1);
+                position: absolute;
+                bottom: 0;
+                left: 720px;
+            }
+            .box-5 {
+                width: 240px;
+                height: 240px;
+                background-color: rgba(25, 25, 25, 1);
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+
+            .div-4 p {
+                font-size: 36px;
+                font-weight: 700;
+                color: #fff;
+                text-shadow: 0 0 10px hsl(0, 0%, 90%);
+                position: absolute;
+            }
+
+            .p-1 {
+                bottom: 20px;
+                right: 40px;
+            }
+            .p-2 {
+                bottom: 20px;
+                right: 270px;
+            }
+            .p-3 {
+                bottom: 20px;
+                right: 450px;
+            }
+            .p-4 {
+                bottom: 20px;
+                right: 560px;
+            }
+            .p-5 {
+                bottom: 20px;
+                right: 700px;
+            }
+
+            .div-4 img {
+                width: 120px;
+                height: 120px;
+                position: absolute;
+            }
+
+            .gma-1 {
+                right: 40px;
+                bottom: 360px;
+            }
+            .gma-2 {
+                right: 220px;
+                bottom: 290px;
+            }
+            .gma-3 {
+                right: 400px;
+                bottom: 200px;
+            }
+            .gma-4 {
+                right: 550px;
+                bottom: 130px;
+            }
+            .gma-5 {
+                right: 680px;
+                bottom: 70px;
+            }
+            .gma-6 img {
+                right: 890px;
+                bottom: 40px;
+                height: 150.66px;
+                width: 200.26px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="mother">
+            <div class="baby">
+                <div class="div-1">
+                    <div class="sec-1">
+                        <img src="./CSS/Html 5.png" alt="" />
+                    </div>
+
+                    <div class="sec-2">
+                        <img src="./CSS/CSS3.png" alt="" />
+                    </div>
+
+                    <div class="sec-3">
+                        <img src="./CSS/JavaScript.png" alt="" />
+                    </div>
+
+                    <div class="sec-4">
+                        <img src="./CSS/React Native.png" alt="" />
+                    </div>
+
+                    <div class="sec-5">
+                        <img src="./CSS/Next.js.png" alt="" />
+                    </div>
+
+                    <div class="sec-6">
+                        <img src="./CSS/Redux.png" alt="" />
+                    </div>
+
+                    <div class="img">
+                        <img
+                            src="./CSS/anonim-icon-vector-sign-on-600nw-1420499171.webp"
+                            alt=""
+                        />
+                    </div>
+                    <div class="soso">
+                        <p>Frontend dasturchi</p>
+                    </div>
+                </div>
+
+                <div class="div-2">
+                    <div class="sec-7">
+                        <img src="./CSS/Html 5.png" alt="" />
+                    </div>
+
+                    <div class="sec-8">
+                        <img src="./CSS/CSS3.png" alt="" />
+                    </div>
+
+                    <div class="sec-9">
+                        <img src="./CSS/JavaScript.png" alt="" />
+                    </div>
+
+                    <div class="sec-10">
+                        <img src="./CSS/Node Js.png" alt="" />
+                    </div>
+
+                    <div class="sec-11">
+                        <img src="./CSS/MySQL Logo.png" alt="" />
+                    </div>
+
+                    <div class="sec-12">
+                        <img src="./CSS/Database.png" alt="" />
+                    </div>
+
+                    <div class="img-2">
+                        <img
+                            src="./CSS/anonim-icon-vector-sign-on-600nw-1420499171.webp"
+                            alt=""
+                        />
+                    </div>
+
+                    <div class="solo">
+                        <p>Backend dasturchi</p>
+                    </div>
+                </div>
+
+                <h1 class="h1">position</h1>
+
+                <div class="div-3">
+                    <div class="box-1"></div>
+                    <div class="box-2"></div>
+                    <div class="box-3"></div>
+                    <div class="box-4"></div>
+                    <div class="box-5"></div>
+                </div>
+
+                <h1 class="h1">
+                    Position: relative absolute (top, bottom, left, va right )
+                </h1>
+
+                <div class="div-4">
+                    <p class="p-5">HTML</p>
+                    <p class="p-4">CSS</p>
+                    <p class="p-3">JS</p>
+                    <p class="p-2">GITHUB</p>
+                    <p class="p-1">REACT JS</p>
+
+                    <img
+                        src="./CSS/png-transparent-react-javascript-library-redux-user-interface-tesseract-logo-symmetry-nodejs 1.png"
+                        alt=""
+                        class="gma-1"
+                    />
+                    <img
+                        src="./CSS/0_20HnVLmUCuVC0QAB 1.png"
+                        alt=""
+                        class="gma-2"
+                    />
+                    <img src="./CSS/3336008 1.png" alt="" class="gma-3" />
+                    <img src="./CSS/8152739 1.png" alt="" class="gma-4" />
+                    <img src="./CSS/1137550 1.png" alt="" class="gma-5" />
+                    <div class="gma-6">
+                        <img src="./CSS/landing-rocket@2x 1.png" alt="" />
+                    </div>
+                </div>
+
+                <h1 class="h1">Position, z-index</h1>
+
+                <div class="div-5">
+                    <div class="div-mini-1">
+                        <div class="numb-1"></div>
+                        <div class="numb-2"></div>
+                        <div class="numb-3"></div>
+                    </div>
+                    <div class="div-mini-2">
+                        <div class="mum-1"></div>
+                        <div class="mum-2"></div>
+                        <div class="mum-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
